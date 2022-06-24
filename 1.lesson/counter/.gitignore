@@ -4,3 +4,8 @@ program/dist
 program/target
 test-ledger/
 .DS_Store
+
+# ignore local files
+wallet.json
+dist/program/
+program/Cargo.lock

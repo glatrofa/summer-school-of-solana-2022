@@ -1,6 +1,6 @@
 struct Person {
     first_name: String,
-    last_name: String
+    last_name: String,
 }
 
 // pub fn main() {
@@ -12,15 +12,15 @@ struct Person {
 // }
 
 impl Person {
-     fn new (first: &str, name: &str) -> Person {
+    fn new(first: &str, name: &str) -> Person {
         Person {
             first_name: first.to_string(),
-            last_name: name.to_string()
+            last_name: name.to_string(),
         }
     }
 }
 
 pub fn main() {
-    let p = Person::new{first: "Janko", name: "Hrasko"};
+    let p = Person::new("Janko", "Hrasko");
     println!("Person {} {}", p.first_name, p.last_name);
 }

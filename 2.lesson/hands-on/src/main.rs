@@ -24,12 +24,12 @@ fn main() {
     // flow_control::flow_control();
     // flow_control::ternal_like();
     // ownership::ownership();
-    // structure::main;
+    structure::main();
 
     // ownership_example::main();
     // ownership_example2::main();
     // ownership_example3::main();
     // slices::main();
-    trait_::main();
+    // trait_::main();
 
 }

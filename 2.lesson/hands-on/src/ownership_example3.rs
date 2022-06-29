@@ -2,7 +2,7 @@ type Id = u32;
 
 struct Handle(Id);
 
-// ~ destrcutor
+// ~ destructor
 // it' called automatically when a variable runs out of scope
 impl Drop for Handle {
     fn drop(&mut self) {

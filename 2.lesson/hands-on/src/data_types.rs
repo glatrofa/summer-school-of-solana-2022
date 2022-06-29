@@ -7,6 +7,12 @@ pub fn print_data_types() {
     let boolean_type = true; // boolean type
     let char_type = '♥'; // unicode character type
 
+    // we can define the type explicitly:
+    // let string_type: &str = "Solana"; // string type
+    // let float_type: f64 = 4.5; // float type
+    // let boolean_type: bool = true; // boolean type
+    // let char_type: char = '♥'; // unicode character type
+
     println!("Summer School of {}", string_type);
     println!("Last lesson rating on 5 is{}", float_type);
     println!("We like Solana {}", boolean_type);

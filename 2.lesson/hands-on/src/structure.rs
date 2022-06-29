@@ -1,12 +1,26 @@
-// struct Person {
-//     first_name: String,
-//     last_name: String
-// }
+struct Person {
+    first_name: String,
+    last_name: String
+}
 
-// fn main() {
+// pub fn main() {
 //     let p = Person {
 //         first_name: "John".to_string(),
 //         last_name: "Smith".to_string()
 //     };
-//     println!("person {} {}", p.first_name,p.last_name);
+//     println!("Person {} {}", p.first_name, p.last_name);
 // }
+
+impl Person {
+     fn new (first: &str, name: &str) -> Person {
+        Person {
+            first_name: first.to_string(),
+            last_name: name.to_string()
+        }
+    }
+}
+
+pub fn main() {
+    let p = Person::new{first: "Janko", name: "Hrasko"};
+    println!("Person {} {}", p.first_name, p.last_name);
+}

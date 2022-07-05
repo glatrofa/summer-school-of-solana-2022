@@ -36,7 +36,7 @@ const init = async () => {
             },
         ],
         data: Buffer.from(
-            Uint8Array.of(0, 1)    
+            Uint8Array.of(0, 1) // 0 calll init instruction, 1 the init state is true   
         ),
     });
 

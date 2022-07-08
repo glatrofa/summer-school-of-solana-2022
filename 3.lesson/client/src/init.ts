@@ -13,6 +13,7 @@ import {
 const init = async () => {
     const connection = new Connection("http://localhost:8899", "confirmed");
     const turnstileProgramId = getProgramId();
+    // just keypars, no account behind yet
     const initializer = getKeypair("initializer");
     const state = getKeypair("state");
 

@@ -37,7 +37,7 @@ pub fn initialize(
     let initialezer_account_info = next_account_info(account_into_iter)?;
     let treasury_account_info = next_account_info(account_into_iter)?;
 
-    let (treasury, bump) =
+    let (treasury, bump) = // PDA
         Pubkey::find_program_address(&[initialezer_account_info.key.as_ref()], program_id);
 
     assert_eq!(treasury, *treasury_account_info.key);

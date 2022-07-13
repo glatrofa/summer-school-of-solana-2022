@@ -8,5 +8,5 @@ pub struct State {
 }
 
 impl State {
-    pub const SERIALZED_SIZE: usize = 1 + 32;
+    pub const SERIALZED_SIZE: usize = 1 + 32; // bites
 }

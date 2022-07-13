@@ -1,5 +1,5 @@
 [package]
-name = "turnstile-3"
+name = "turnstile"
 version = "0.1.0"
 edition = "2018"
 

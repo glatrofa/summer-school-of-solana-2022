@@ -8,17 +8,15 @@ use solana_program::{
 };
 
 #[derive(Debug, BorshDeserialize, BorshSerialize)]
-// instance of this enum to the instruction_data array of bytes
-// Borsh library deserialize/serialize the enum to the bytes array
 pub enum TurnstileInstruction {
     /// Initialize a Turnstile state
     ///
     /// Passed accounts:
     ///
     /// (1) [signer, writable] State Account
-    /// (2) [signer, writable] Initializer (who pays for the transaction)
+    /// (2) [signer, writable] Initializer
     /// (3) [writable] Treasury wallet (PDA)
-    /// (4) [] System Program (will be called create_account instruction)
+    /// (4) [] System Program
     Initialze { init_state: bool },
     /// Push
     ///
@@ -44,10 +42,9 @@ pub fn initialize(
     init_state: bool,
 ) -> Instruction {
     let (treasury, _) = Pubkey::find_program_address(&[initializer.as_ref()], &turnstile_program);
-    Instruction { // builds Solana instruction
+    Instruction {
         program_id: turnstile_program,
         accounts: vec![
-            // AccountMeta defines if the account is signable, if it's true then the account is writeable
             AccountMeta::new(state, true),
             AccountMeta::new(initializer, true),
             AccountMeta::new(treasury, true),
